@@ -6,7 +6,6 @@ import logging
 from logging import FileHandler
 import time
 from datetime import datetime
-import pytz
 from apscheduler.schedulers.background import BackgroundScheduler
 import signal
 import sys
@@ -45,8 +44,7 @@ logging.getLogger('apscheduler').setLevel(logging.WARNING)
 # Кастомный форматтер
 class CustomFormatter(logging.Formatter):
     def formatTime(self, record, datefmt=None):
-        tz = pytz.timezone('Europe/Moscow')
-        dt = datetime.fromtimestamp(record.created, tz)
+        dt = datetime.fromtimestamp(record.created)
         return dt.strftime('%Y-%m-%d %H:%M:%S')
 
     def format(self, record):
