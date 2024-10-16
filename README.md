@@ -1,4 +1,4 @@
-# CopyFlow - A web application for transferring text to your Smart TV
+# CopyFlow - A Python web application for transferring text to your Smart TV
 CopyFlow is an app that lets you easily transfer any text to your Smart TV's clipboard — no extra software needed, just a browser.
 <p align="center">
   <img width="75%" src="https://github.com/aiovin/CopyFlow/blob/main/preview.png">
