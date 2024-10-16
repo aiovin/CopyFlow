@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy text transfer to Smart TV">
+    <meta name="author" content="aiovin">
+    <title>Copy Flow</title>
+    <link rel="icon" href="static/favicon-100x100.png" type="image/png">
+    <link rel="apple-touch-icon" href="static/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">CopyFlow</h1><br>
+            <div class="step">
+                <h2>Step 1: Enter data on your phone or computer</h2>
+                Come up with a secret key and enter the text you want to use on another device.
+                <div class="form">
+                    <form id="jsonForm">
+                        <input type="text" name="field1" placeholder="Secret Key" required>
+                        <textarea name="field2" placeholder="Your Text" required></textarea><br>
+                        <button type="submit">Submit</button>
+                        <span id="loader" class="loader hidden"></span>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="response" id="result"></div>
+            <br>
+            <div class="step">
+                <h2>Step 2: Create a button to copy text to clipboard</h2>
+                Open the site on another device, enter your secret key, and create your copy button.
+                <div class="form">
+                    <form id="FieldCopyTextForm">
+                        <input type="text" name="field1-copy-text-button" placeholder="Your Secret Key" required>
+                        <button type="submit">Create</button>
+                        <span id="loader2" class="loader hidden"></span>
+                    </form>
+                </div>
+            </div>
+        <div class="response" id="result2">[ your button will be here ]</div>
+    </div>
+    <div class="footer">&copy <span id="current-year"></span> CopyFlow by <a href="https://github.com/aiovin">aiovin</a></div>
+</body>
+</html>
