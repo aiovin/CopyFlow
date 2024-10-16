@@ -5,7 +5,7 @@ CopyFlow is an app that lets you easily transfer any text to your Smart TV's cli
 </p>
 
 ## Why?
-Originally, this application was designed to simplify entering VPN keys on a Smart TV by avoiding manual input.
+Originally, this application was designed to simplify the entry of VPN configurations on a Smart TV, eliminating the need for manual input.
 
 ## How to Use
 - Download the source code from the [Releases page](https://github.com/aiovin/CopyFlow/releases).
